@@ -1,7 +1,7 @@
 const mongoose=require('mongoose')
 
 
-const UrlScheme=mongoose.Schema({
+const urlScheme=mongoose.Schema({
     shortId:{
         type:String,
         required:true,
@@ -11,10 +11,11 @@ const UrlScheme=mongoose.Schema({
         type:String,
         required:true,
     },
-    visitHistory:[{timestamp:{type:Number}}]
-},{timestamps:true}
+    visitHistory:[{timestamp:{type:Number}}],
+},
+{timestamps:true}
 )
 
-const URL=mongoose.model('url',UrlScheme)
+const URL=mongoose.model('url',urlScheme)
 
 module.exports=URL
